@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+  <!--FONTS-->
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Krona" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+  <!--FONTS-->
+ 
+
+</head>
+<body>
+	<div class="whole">
+     <header><h1>Military Aircrafts</h1></header>
+       <nav class="vnav"> <ul class="vul" style="list-style-type:none;">
+             <li class="vli"><a class="vlia" href="index.html">Home</a></li>
+             <li class="vli"><a class="vlia" href="register.html">Register</a></li>
+             <li class="vli"><a class="vlia" href="contact.html">Contact</a></li>
+             
+             <li class="vli"><a class="vlia" href="#about">About</a></li>
+       </ul> </nav>
+
+      <div class="flex-container"> 
+       
+       <aside class=>
+        <h3 style="color:#c70505">Top 10 interesting facts about military aircraft</h3>
+        <ol type='1'>
+          <li>During WW2, Royal Air Force fighter pilots started a rumor that excessive carrot consumption gave gunners night vision. The point of the rumor was to distract the Germans from RAF’s new radar technology. Because of this rumor, Germans began eating large quantities of carrots.</li>
+          <li>Chuck Yeager, was the first man to fly faster than the speed of sound.</li>
+          <li>During WW2, a single American P-51 fighter plane held off 30 German fighters from attacking a squadron of B-17 bombers for over a half an hour.</li>
+          <li>In 1953 due to high speed a F-11 fighter shot itself because it was faster than it’s own bullet.</li>
+          <li>In 1983, an Israeli pilot successfully landed and F-15 with only one wing. The pilot didn’t realize the extent of the damage until after landing. He stated he would have ejected if he had known.</li>
+          <li>A McDonnell Douglas F-15 once shot down a satellite.</li>
+          <li>The only plane allowed to fly on 9/11 after the attacks was a plane from San Diego to Miami delivering anti-venom to a man bitten by a highly poisonous snake. The plane was accompanied by two jet fighters.</li>
+          <li>The Lockheed U-2 is so hard to land that on every landing,the plane is paced by a chase car such as the Camaro SS with an assistant “talking” the pilot down. Since 2001, more than a dozen pilots have suffered the effects of decompression sickness and nine were reported to have suffered permanent brain damage.</li>
+          <li>4 Phantom II was called “World’s Leading Distributor of MiG Parts” because it destroyed so many MiG fighters</li>
+          <li>During WW2, while parachuting from a damaged bomber, an American aviator downed, a Japanese fighter plane by shooting the pilot in the head with his sidearm.</li>
+        </ol>
+      </aside>
+      <section>
+        <h2 style="margin-bottom: 2em;">Contact us</h2>
+        <div class="contact-pos">
+       <div class="contact-container">
+          <form action="/action_page.php">
+          <label for="names">Name</label>
+          <input class="contact-fields" type="text" id="names" name="name" placeholder="Enter your name..">
+
+          <label for="email">E-mail</label>
+          <input class="contact-fields" type="text" id="email" name="email" placeholder="Enter your email..">
+          <label for="subject">Subject</label>
+          <textarea class="contact-fields" id="subject" name="subject" placeholder="Write something.." style="height:250px"></textarea>
+          <input class="contact-st" type="submit" value="Send">
+          </form>
+       </div>
+       <div class="adr-container"> 
+        <div><img src="contact/location.png"><p> Faculty of Mathematics and Informatics University of Plovdiv "Paisii Hilendarski" bul.Bulgaria 236, 4027 Plovdiv</p> </div> 
+        <div style="clear:left;"><img src="contact/phone.png"><p><br>032 261-755, 032 261-788, 032 261-736</p> </div> 
+        <div style="clear:left;"><img src="contact/email.png"><p><br>dean-fmi@uni-plovdiv.bg</p></div>
+          <div id="map">
+            <script>
+              function initMap() {
+              var uluru = {lat: 42.138249, lng: 24.751392};
+              var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 16,
+              center: uluru
+              });
+              var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+             });
+             }
+          </script>
+         <script async defer
+             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwy90o0Y1L0Ht3tJd7wQEthgGvmssQjJ4&callback=initMap">
+         </script>
+  </div>
+       </div>
+         </div>
+       </section>
+     </div>
+     <div class=""></div>
+       <footer>
+         <div class="social-media-buttons">
+          <p style="color:#fdf9f9;">Find us on social media:</p>
+           <a href="https://www.facebook.com/" target="_blank"><img src="socialmedia/facebook-icon.png"></a>
+           <a href="https://www.instagram.com/" target="_blank"><img src="socialmedia/instagram-icon.png"></a>
+           <a href="https://www.twitter.com/" target="_blank"><img src="socialmedia/twitter-icon.png"></a>
+         </div>
+         <p style="color:black;">site design © 2017 Engin; <p>
+       </footer>
+	</div>
+</body>
+</html>

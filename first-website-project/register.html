@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+</head>
+<body style="background-color:#6c7481;">
+	<div>
+        <nav class="vnav"> <ul class="vul" style="list-style-type:none;">
+             <li class="vli"><a class="vlia" href="index.html">Home</a></li>
+             <li class="vli"><a class="vlia" href="register.html">Register</a></li>
+             <li class="vli"><a class="vlia" href="contact.html">Contact</a></li>
+             <li class="vli"><a class="vlia" href="#about">About</a></li>
+       </ul> </nav>
+     </nav>
+      <div class="loguplayout">
+         <div class="logupbckpad">
+           <form style="background-color:rgba(255,255,255,0.4);padding:1% 1% 1% 2%;" action="/action_page.php">
+               <label class ="blockelems"><b>Name</b></label>
+               <input type="text" class="forminline" placeholder="First name" name="firstname" required>
+               <input type="text" class="forminline" placeholder="Surname" name="surname" required>
+           <label class ="blockelems"><b>Password</b></label>
+           <input class="lginput" type="password" placeholder="Enter Password" name="psw" required>
+           <label><b>Repeat Password</b></label>
+           <input class="lginput" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+           <label class ="blockelems"><b>Date of birth</b></label>
+               <input type="text" class="forminline f3" placeholder="Day" name="Day" required>
+               <select name="months" class="lg-months">
+                  <option value="Select month" disabled>Month</option>
+                  <option value="jan">January</option>
+                  <option value="feb">Febryary</option>
+                  <option value="mar">March</option>
+                  <option value="apr">April</option>
+                  <option value="may">May</option>
+                  <option value="jun">June</option>
+                  <option value="jul">July</option>
+                  <option value="aug">August</option>
+                  <option value="sep">September</option>
+                  <option value="oct">October</option>
+                  <option value="nov">November</option>
+                  <option value="dec">December</option>
+               </select>
+               <input type="text" class="forminline f3" placeholder="Year" name="Year" required>
+          <label class ="blockelems"><b>Gender</b></label>
+           <input style="height:1em; margin-top:0.85em;margin-bottom:0.8em;" type="radio" name="gender" value="male" checked><span>Male</span>
+           <input style="height:1em" type="radio" name="gender" value="female"><span>Female</span>
+           <label class ="blockelems"><b>Email adress</b></label>
+           <input class="lginput" type="text" placeholder="Email adress" name="email" required>  
+           <br> 
+           <input class="lginput lg-st" type="submit" value="Submit">
+           </form> 
+          <div>
+        </div>
+	</div>
+
+</body>
+</html>
