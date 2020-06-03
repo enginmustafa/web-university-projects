@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="row">
+		<div class="col-md-4 col-md-offset-4">
+    		<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">Register</h3>
+			 	</div>
+			  	<div class="panel-body">
+			    	<form [formGroup]="form" (ngSubmit) = "onSubmit()" accept-charset="UTF-8">
+                    <fieldset class="form-group-fieldset">
+						<div class="errorMessageLabelContainer">
+			    	    	<label class = "errorMessageLabel">{{errorMessage}}</label>
+                        </div>
+			    	  	<div class="form-group">
+							<input class="form-control" 
+									placeholder="E-mail" 
+									name="email" 
+									type="text"
+									formControlName="email">
+                        </div>
+                        <div class="form-group">
+							<input class="form-control" 
+									placeholder="Password" 
+									name="password"
+									type="password"
+									value=""
+									formControlName="password">
+									
+						</div>
+						<div class="form-group">
+							<input class="form-control" 
+									placeholder="Repeat password" 
+									name="rePassword" 
+									type="password" 
+									value=""
+									formControlName="rePassword">
+			    		</div>
+                        <div class="form-group">
+							<input class="form-control" 
+									placeholder="First name" 
+									name="fName" 
+									type="text"
+									formControlName="fName">
+			    		</div>
+			    		<div class="form-group">
+							<input class="form-control" 
+									placeholder="Last name" 
+									name="lName" 
+									type="text" 
+									value=""
+									formControlName="lName">
+			    		</div>
+			    		<div class="routerLabelContainer">
+			    	    	<label>
+			    	    		<a class = "routerLabel" routerLink="/login">Already have an account? Sign in!</a>
+			    	    	</label>
+                        </div>
+                        <div class ="submitBtnContainer">
+                            <input class="submitBtn" type="submit" value="Register">
+                        </div>
+			    	</fieldset>
+			      	</form>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>

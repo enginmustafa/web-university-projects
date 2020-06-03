@@ -1,0 +1,119 @@
+{
+  "users": [
+    {
+      "email": "admin@ng.com",
+      "fName": "Website",
+      "lName": "Administrator",
+      "password": "123456789",
+      "administrator": true,
+      "blocked": false,
+      "favoriteCourses": [],
+      "id": 1
+    },
+    {
+      "email": "user1@ng.com",
+      "fName": "First",
+      "lName": "User",
+      "password": "123456789",
+      "administrator": false,
+      "blocked": false,
+      "favoriteCourses": [
+        {
+          "title": "First course",
+          "description": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+          "date": "2020-06-17",
+          "rating": 1,
+          "userRatings": [
+            {
+              "userId": 2,
+              "rating": "1"
+            }
+          ],
+          "id": 1
+        }
+      ],
+      "id": 2
+    },
+    {
+      "email": "user2@ng.com",
+      "fName": "Second",
+      "lName": "User",
+      "password": "123456789",
+      "administrator": false,
+      "blocked": false,
+      "favoriteCourses": [
+        {
+          "title": "Second course",
+          "description": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+          "date": "2020-06-11",
+          "rating": 1.5,
+          "userRatings": [
+            {
+              "userId": 2,
+              "rating": "1"
+            },
+            {
+              "userId": 3,
+              "rating": "2"
+            }
+          ],
+          "id": 2
+        }
+      ],
+      "id": 3
+    }
+  ],
+  "courses": [
+    {
+      "title": "First course",
+      "description": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+      "date": "2020-06-17",
+      "rating": 1,
+      "userRatings": [
+        {
+          "userId": 2,
+          "rating": "1"
+        },
+        {
+          "userId": 3,
+          "rating": "2"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "title": "Second course",
+      "description": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+      "date": "2020-06-11",
+      "rating": 1,
+      "userRatings": [
+        {
+          "userId": 2,
+          "rating": "1"
+        },
+        {
+          "userId": 3,
+          "rating": "2"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "title": "Third course",
+      "description": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+      "date": "2020-06-19",
+      "rating": 1,
+      "userRatings": [
+        {
+          "userId": 2,
+          "rating": "1"
+        },
+        {
+          "userId": 3,
+          "rating": "2"
+        }
+      ],
+      "id": 3
+    }
+  ]
+}

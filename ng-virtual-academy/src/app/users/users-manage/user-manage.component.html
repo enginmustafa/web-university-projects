@@ -1,0 +1,27 @@
+<div class= "wrapper-container">
+    <div class = "table-container">
+        <h3 class = "table-title">Manage users</h3>
+
+        <table class="table">
+
+            <thead>
+              <tr>
+                <th class="table-col">Id</th>
+                <th class="table-col">First name</th>
+                <th class="table-col">Last name</th>
+                <th class="table-col">Email address</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users; let i = index">
+                <td>{{user.id}}</td>
+                <td>{{user.fName}}</td>
+                <td>{{user.lName}}</td>
+                <td>{{user.email}}</td>
+                <td><button class = "row-btn" (click) = "onBlock(user)" [disabled]="user.blocked">Block</button></td>
+                <td><button class = "row-btn" (click) = "onDelete(user)">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>

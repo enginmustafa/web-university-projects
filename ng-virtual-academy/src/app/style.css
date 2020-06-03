@@ -1,0 +1,181 @@
+
+body {
+    padding-top:20px;
+}
+
+.container {
+    padding:10px;
+    vertical-align:middle;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    width: 300px;
+    background-color: white;
+}
+
+.panel-title{
+    font-size: x-large;
+    font-family: sans-serif;
+    color: black;
+}
+
+.submitBtn {
+    border-radius:12px;
+    background-color: rgb(61, 61, 228); 
+    border: none;
+    color:white;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: large;
+    font-family: sans-serif;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+}
+
+.submitBtn:hover {
+    background-color: rgb(8, 8, 204);
+}
+
+.submitBtnContainer {
+    padding-top:5px;
+}
+
+.routerLabelContainer {
+    padding-top:15px;
+    padding-left:5px;
+    font-size: smaller;
+
+}
+
+.routerLabel {
+    color:rgb(61, 61, 228);
+    text-decoration: none;
+}
+
+.routerLabel:hover {
+    color:blue;
+    text-decoration: underline;
+}
+
+.errorMessageLabelContainer {
+    font-size: smaller;
+    padding: 5px;
+    visibility:visible;
+}
+
+.errorMessageLabel {
+    color: red;
+}
+
+.form-group {
+    padding: 5px 5px 10px 5px;
+    font-size: large;
+    width: 100%;
+}
+
+.form-control{
+    border-radius: 6px;
+    padding:2%;
+    font-size: large;
+}
+
+.form-group-fieldset {
+    padding: 10px;
+}
+
+.wrapper-container {
+    padding: 0 5% 5% 5%;
+}
+
+.table-container {
+    vertical-align:middle;
+    margin: 0 auto;
+}
+
+.table {
+    margin: 0 auto;
+}
+
+.table-col {
+    white-space: nowrap;
+    padding-right: 5%;
+    font-size: large;
+}
+
+.table-title {
+    font-size: x-large;
+}
+
+.column-header-container {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-top-style:solid;
+    border-bottom-style:solid;
+    color: white;
+    background-color: blue;
+}
+
+.table-row {
+    font-size: large;
+}
+
+.row {
+    padding-left: 5%;
+}
+
+.row-btn {
+    font-size: medium;
+}
+
+.row-select {
+    font-size:medium;
+    min-width: 100px;
+}
+
+.tbody {
+    padding-left:100px;
+}
+
+.row-btn-container {
+    padding-left:5%;
+}
+
+.row-btn-container-courses{
+    padding-bottom:5%;
+    padding-top:5%;
+}
+
+.table-col-padded {
+    padding-left: 5%;
+}
+
+.row-courses {
+    padding: 0 0 0 1%;
+    text-align: center;
+    min-width: 30%;
+    max-width: 400px;
+    word-wrap: normal;
+}
+
+.row-wrap {
+    min-width: 150px;
+    word-wrap: break-word;
+}
+
+.row-symbol {
+    font-size: x-large;
+    color: black;
+}
+
+.row-symbol-red {
+    font-size: x-large;
+    color:red;
+    text-align: center;
+}
+
+.table-router-label-container {
+    margin-bottom: 10%;
+}

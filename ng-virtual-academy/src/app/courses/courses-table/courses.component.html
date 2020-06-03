@@ -1,0 +1,47 @@
+<div class= "wrapper-container">
+    <div class = "table-container">
+        <h3 class = "table-title">{{isUserAdmin ? 'Manage courses' : 'Courses'}}</h3>
+        <table class="table">
+
+          <thead>
+            <div class="table-router-label-container">
+              <a class = "routerLabel table-router-label" routerLink="/courses-add" *ngIf = "isUserAdmin">[New course]</a>
+            </div>
+            <tr class>
+              <th class="table-col table-col-padded" *ngIf = "isUserAdmin"></th>
+              <th class="table-col table-col-padded" *ngIf = "!isUserAdmin">Favorite</th>
+              <th class="table-col table-col-padded" *ngIf = "isUserAdmin">Id</th>
+              <th class="table-col table-col-padded">Rating</th>
+              <th class="table-col table-col-padded" *ngIf = "!isUserAdmin">Rate</th>
+              <th class="table-col table-col-padded">Title</th>
+              <th class="table-col table-col-padded">Description</th>
+              <th class="table-col table-col-padded">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let userCourse of courses; let i = index">
+              <td class = "row-courses">
+                <button class = "row-symbol" *ngIf = "!isUserAdmin" (click)="onFavorite(userCourse.course)">{{userCourse.isFavorite ? '★' : '☆'}}</button>
+              </td>
+              <td class = "row-courses" *ngIf = "isUserAdmin">{{userCourse.course.id}}</td>
+              <td class = "row-courses" >{{userCourse.course.rating ? userCourse.course.rating : '-'}}</td>
+              <td *ngIf="!isUserAdmin" class = "row-courses">
+                <select ng-model="rc.status" ng-init="rc.status=1" class = "row-courses row-select" #courseSelect (change)="onRate(userCourse.course, courseSelect.value)">
+                  <option value=0 [selected] = "userCourse.userRating==0"></option> 
+                  <option value=1 [selected] = "userCourse.userRating==1">1</option> 
+                  <option value=2 [selected] = "userCourse.userRating==2">2</option>
+                  <option value=3 [selected] = "userCourse.userRating==3">3</option>
+                  <option value=4 [selected] = "userCourse.userRating==4">4</option>
+                  <option value=5 [selected] = "userCourse.userRating==5">5</option>
+                </select>
+              </td>
+              <td class = "row-courses">{{userCourse.course.title}}</td>
+              <td class = "row-courses row-wrap">{{userCourse.course.description}}</td>
+              <td class = "row-courses row-wrap">{{userCourse.course.date}}</td>
+              <td class = "row-btn-container row-btn-container-courses"><button class = "row-btn" (click) = "onEdit(userCourse.course)" [hidden]="!isUserAdmin">Edit</button></td>
+              <td class = "row-btn-container row-btn-container-courses"><button class = "row-btn" (click) = "onDelete(userCourse.course)" [hidden]="!isUserAdmin">Delete</button></td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+    </div>
