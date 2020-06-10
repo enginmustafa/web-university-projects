@@ -1,0 +1,11 @@
+.nav-component-container {
+    display: inline;
+    padding-right: 10%;
+}
+
+.nav-component {
+    margin: 0 auto;
+    font-size: large;
+    text-align:center;
+    color:blue;
+}
