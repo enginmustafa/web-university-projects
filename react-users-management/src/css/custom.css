@@ -1,0 +1,8 @@
+.user-pic {
+    max-width: 60px;
+}
+
+.grid-user-container .user-overview {
+    height: 115px;
+    overflow: hidden;
+}
