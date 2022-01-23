@@ -1,0 +1,5 @@
+export const ACTIONS = {
+    SET_USERS: "SET_USERS",
+    ADD_USER: "ADD_USER",
+    SET_FILTERED_USERS: "SET_FILTERED_USERS"
+};

@@ -9,7 +9,7 @@ function ListView({ user }) {
                     <div className="d-flex align-items-start justify-content-between">
                         <div>
                             <div className="fw-bold user-title">
-                                {user.title + user.firstName + user.lastName}
+                                {user.title + ' ' + user.firstName + ' ' +  user.lastName}
                             </div>
                             <div className="user-email">
                                 {user.email}

@@ -1,12 +1,22 @@
 import { Card, Form, Button } from 'react-bootstrap';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
+import { useSelector } from "react-redux";
+import { filterUsers } from "../Store/actionInvoker";
 
-function MyFilters({ filterUsers }) {
+function MyFilters() {
     const [gender, setGender] = useState('');
     const birthYearRef = useRef(null);
     const countryRef = useRef(null);
     const cityRef = useRef(null);
+    const titleRef = useRef(null);
+    const fullUsers = useSelector((state) => state.users);
+
+    useEffect(
+        () => {
+            filterUsers(fullUsers, {});
+        },
+        [fullUsers]);
 
     function onGenderSelectionChange(e) {
         if (gender !== e.target.value)
@@ -14,7 +24,7 @@ function MyFilters({ filterUsers }) {
     }
 
     function onGenderSelectionClick(e) {
-        if (gender == e.target.value)
+        if (gender === e.target.value)
             setGender('');
     }
 
@@ -25,8 +35,9 @@ function MyFilters({ filterUsers }) {
         setNonEmptyProp(filters, "birthYear", birthYearRef.current.value);
         setNonEmptyProp(filters, "location.country", countryRef.current.value);
         setNonEmptyProp(filters, "location.city", cityRef.current.value);
+        setNonEmptyProp(filters, "title", titleRef.current.value);
 
-        filterUsers(filters);
+        filterUsers(fullUsers, filters);
     }
 
     //set prop only if non empty
@@ -51,7 +62,6 @@ function MyFilters({ filterUsers }) {
 
     function ensureNumericInput(e) {
         if (e.key === '') {
-            console.log('IN 1')
             return;
         }
 
@@ -67,25 +77,34 @@ function MyFilters({ filterUsers }) {
             <Card.Body>
                 <Card.Title>Filters</Card.Title>
                 <Form>
+                    <Form.Group className="mb-3" id="t">
+                        <Form.Label>Title</Form.Label>
+                        <Form.Select ref={titleRef} aria-label="Title select">
+                            <option value=""></option>
+                            <option value="mr">Mr</option>
+                            <option value="mrs">Mrs</option>
+                            <option value="miss">Miss</option>
+                        </Form.Select>
+                    </Form.Group>
                     <Form.Group className="mb-3" id="gender">
                         <Form.Label>Gender</Form.Label>
                         <Form.Check
                             type="radio"
                             label="Male"
-                            value="Male"
+                            value="male"
                             id="gender-male"
                             onChange={(e) => onGenderSelectionChange(e)}
                             onClick={(e) => onGenderSelectionClick(e)}
-                            checked={gender === "Male"}
+                            checked={gender === "male"}
                         />
                         <Form.Check
                             type="radio"
                             label="Female"
-                            value="Female"
+                            value="female"
                             id="gender-female"
                             onChange={(e) => onGenderSelectionChange(e)}
                             onClick={(e) => onGenderSelectionClick(e)}
-                            checked={gender === "Female"}
+                            checked={gender === "female"}
                         />
                     </Form.Group>
 

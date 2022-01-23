@@ -3,9 +3,11 @@ import { useState } from "react";
 import ListView from "./listView";
 import GridView from "./gridView";
 
+import { useSelector } from "react-redux";
 
-function MyResults({users}) {
+function MyResults() {
   const [listView, setListView] = useState(true);
+  const filteredUsers = useSelector((state) => state.filteredUsers);
 
   function changeListView(e) {
     setListView(e.target.value === "true");
@@ -30,7 +32,7 @@ function MyResults({users}) {
           </div>
         <Row>
           {
-            users.map(function (item) {
+            filteredUsers.map(function (item) {
               return (
                 <ViewBySelection key={"p_" + item.id} item={item}/>
               );
